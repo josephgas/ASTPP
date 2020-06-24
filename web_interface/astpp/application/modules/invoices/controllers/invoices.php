@@ -343,7 +343,7 @@ class Invoices extends MX_Controller
                 $data['cmp_name'] = $company_data->company_name;
                 $data['cmp_address'] = $company_data->address;
                 $data['cmp_city_zipcode'] = $company_data->city . ' - ' . $company_data->zipcode;
-                $data['cmp_province_country'] = $company_data->province . ' , ' . $company_data->country;
+                $data['cmp_province_country'] = $company_data->province . ' , ' . $country_name->country;
                 $data['cmp_telephone'] = $company_data->telephone;
                 $data['cmp_tax'] = $company_data->invoice_taxes_number;
                 $data['cmp_invoice_note'] = $company_data->invoice_note;
