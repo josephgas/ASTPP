@@ -93,7 +93,8 @@ install_prerequisties ()
         if [ $DIST = "CENTOS" ]; then
                 systemctl stop httpd
                 systemctl disable httpd
-                yum update
+		yum -y install epel-release
+                yum -y update
                 yum install -y wget curl git bind-utils ntpdate systemd net-tools whois sendmail sendmail-cf mlocate vim
         else if [ $DIST = "DEBIAN" ]; then
                 systemctl stop apache2
